@@ -30,10 +30,10 @@ class Game {
     this._running = false
   }
 
-  tick () {
+  tick (ts) {
     // Main loop
     if (this._currentState && typeof this._currentState.tick === 'function')
-      this._currentState.tick()
+      this._currentState.tick(ts)
     this._timer = requestAnimationFrame(this.tick.bind(this))
   }
 }

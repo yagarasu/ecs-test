@@ -3,6 +3,7 @@ import MotionComponent from 'modules/motion/MotionComponent'
 import WarpOnEdgeComponent from 'modules/motion/WarpOnEdgeComponent'
 import BounceOnEdgeComponent from 'modules/motion/BounceOnEdgeComponent'
 import AIComponent from 'modules/ai/AIComponent'
+import CollisionComponent from 'modules/collision/CollisionComponent'
 
 const C = 0xa93d3dff
 const _ = 0x00000000
@@ -35,7 +36,8 @@ export default (opts, type) => {
       ...opts
     }),
     new MotionComponent(),
-    new AIComponent()
+    new AIComponent(),
+    new CollisionComponent({ w: 16, h: 16 })
   ]
   if (type === 'warp') {
     components.push(new WarpOnEdgeComponent())

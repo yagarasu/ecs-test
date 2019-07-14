@@ -15,7 +15,7 @@ class InputSystem {
   init () {
     window.addEventListener('keydown', (e) => {
       const key = e.key
-      this._keys = { [key]: true }
+      this._keys[key] = true
     })
     window.addEventListener('keyup', e => {
       const key = e.key

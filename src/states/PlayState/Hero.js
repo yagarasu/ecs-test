@@ -2,6 +2,7 @@ import SpriteComponent from 'modules/sprite/SpriteComponent'
 import MotionComponent from 'modules/motion/MotionComponent'
 import WarpOnEdgeComponent from 'modules/motion/WarpOnEdgeComponent'
 import InputComponent from 'modules/input/InputComponent'
+import CollisionComponent from 'modules/collision/CollisionComponent'
 
 const C = 0xdae392ff
 const _ = 0x00000000
@@ -33,5 +34,6 @@ export default (opts) => [
   }),
   new MotionComponent(),
   new WarpOnEdgeComponent(),
-  new InputComponent()
+  new InputComponent(),
+  new CollisionComponent({ w: 16, h: 16 })
 ]

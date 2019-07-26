@@ -5,7 +5,7 @@ import BounceOnEdgeComponent from 'modules/motion/BounceOnEdgeComponent'
 import AIComponent from 'modules/ai/AIComponent'
 import CollisionComponent from 'modules/collision/CollisionComponent'
 
-const C = 0xa93d3dff
+const C = 0xffffffff
 const _ = 0x00000000
 const sprite = Uint32Array.from([
   _,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,

@@ -20,15 +20,7 @@ class SpriteSystem {
     }
   }
 
-  clear () {
-    this.cx.save()
-    this.cx.fillStyle = '#000000'
-    this.cx.fillRect(0, 0, this.canvas.clientWidth, this.canvas.clientHeight)
-    this.cx.restore()
-  }
-
   tick () {
-    this.clear()
     const entities = this.cm.getEntitiesByComponent('Sprite')
     entities.forEach(entity => {
       const { Sprite } = entity.components
